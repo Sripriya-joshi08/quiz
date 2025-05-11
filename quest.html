@@ -1,0 +1,38 @@
+<html>
+<body>
+<form onsubmit="answers(event)"><h1>
+what does HTML stands for?<br>
+<input type=radio id=q1 name=q1>
+<label for=q11>hyper text markup language</label><input type=radio id=q1 name=q1><label for=q1>home tool markup language</label><input type=radio id=q1 name=q1>
+<label for=q12>hyperlinks text markup language</label><br><br>
+'1'+'2'=?
+<input type=radio id=q2 name=q2>
+<label for=q14>19</label>
+<input type=radio id=q2 name=q2>
+<label for=q13>12</label>
+<input type=radio id=q2 name=q2>
+<label for=q14>3</label><br><br>
+which language runs in a web browser?
+<input type=radio id=q3 name=q3>
+<label for=q14>python</label>
+<input type=radio id=q3 name=q3>
+<label for=q15>html</label>
+<input type=radio id=q3 name=q3>
+<label for=q18>Javascript</label><br><br>
+<input type=submit value=submit color:red>
+</form></h1>
+<script>
+function answers(event){
+event.preventDefault();
+const q1=document.querySelector('input[name="q1"]:checked')
+const q2=document.querySelector('input[name="q2"]:checked')
+const q3=document.querySelector('input[name="q3"]:checked')
+let score=0;
+if (q1=="hyper text markup language")score++;
+if(q2=="12")score++;
+if(q3=="Javascript")score++;
+alert("you scored +score+ out of 3);
+}
+</script>
+</body>
+</html>
